@@ -14,6 +14,7 @@ import com.gang.exam.demo.vo.Article;
 @Controller
 public class UserArticleController {
 	//인스턴스 변수 시작
+	private ArticleService articleService;
 	private int articlesLastId ;
 	private List<Article> articles ;
 	//인스턴스 변수 끝
