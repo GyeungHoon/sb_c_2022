@@ -95,6 +95,20 @@ public class UserArticleController {
 		
 	}
 	
+	@RequestMapping("/usr/article/getArticle")
+	@ResponseBody
+	public Object getArticleAction(int id){
+		
+		Article article = getArticle(id);
+		
+		if(article == null) {
+			return id +"번 게시물은 존재하지 않습니다.";
+		}
+		
+		return articles;
+		
+	}
+	
 	@RequestMapping("/usr/article/doDelete")
 	@ResponseBody
 	public String doDelete(int id){
