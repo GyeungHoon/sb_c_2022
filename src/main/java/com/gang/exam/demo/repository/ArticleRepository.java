@@ -15,23 +15,23 @@ import com.gang.exam.demo.vo.Article;
 @Mapper
 public interface ArticleRepository {
 
-	@Insert("INSERT INTO article SET regDate = NOW(),updateDate=NOW(), title=#{title}, `body`=#{body}")
+	
 	public void writeArticle(@Param("title")String title, @Param("body")String body);
 	
 	
-	@Select("SELECT * from article where id = #{id}")
+	
 	public Article getArticle(@Param("id") int id);
 	
-	@Delete("DELETE from article where id = #{id}")
+	
 	public void deleteArticle(@Param("id") int id);
 	
-	@Update("UPDATE article set title = #{title}, `body`=#{body}, updateDate=NOW() where id=#{id}")
+	
 	public void modifyArticle(@Param("id")int id, @Param("title")String title, @Param("body")String body);
 
-	@Select("SELECT * from article ORDER BY id DESC")
+	
 	public List<Article> getArticles();
 
-	@Select("SELECT LAST_INSERT_ID()")
+	
 	public int getLastInsertId();
 
 
