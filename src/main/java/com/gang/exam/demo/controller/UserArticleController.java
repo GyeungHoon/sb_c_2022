@@ -14,10 +14,10 @@ import com.gang.exam.demo.vo.Article;
 
 @Controller
 public class UserArticleController {
+	
 	@Autowired
 	private ArticleService articleService;
-	
-	
+
 // 액션 메서드 시작
 	@RequestMapping("/usr/article/doAdd")
 	@ResponseBody
