@@ -19,6 +19,15 @@
 		email = #{cellphoneNo}
 	</insert>
 
+<select id="getLastInsertId" resultType="int">
+	SELECT LAST_INSERT_ID()
+</select>
+
+<select id="getMemberById" resultType="Member">
+
+SELECT * FROM `member` AS M WHERE M.id = #{id}
+
+</select>
 
 
 </mapper>
