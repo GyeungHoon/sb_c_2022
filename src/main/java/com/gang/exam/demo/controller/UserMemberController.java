@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.gang.exam.demo.service.MemberService;
+import com.gang.exam.demo.util.Ut;
 import com.gang.exam.demo.vo.Member;
 
 @Controller
@@ -19,7 +20,7 @@ public class UserMemberController {
 	public Object doJoin(String loginId, String loginPw, String name, String nickname, String cellphoneNo,
 			String email) {
 
-		if(loginId == null || loginId.trim().length() == 0) {
+		if(Ut.empty(loginId)) {
 			return "loginId(을)를 입력해주세요.";
 		}
 		if(loginPw == null || loginPw.trim().length() == 0) {
