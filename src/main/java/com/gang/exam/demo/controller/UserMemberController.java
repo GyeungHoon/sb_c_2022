@@ -23,19 +23,19 @@ public class UserMemberController {
 		if(Ut.empty(loginId)) {
 			return "loginId(을)를 입력해주세요.";
 		}
-		if(loginPw == null || loginPw.trim().length() == 0) {
+		if(Ut.empty(loginPw)) {
 			return "loginPw(을)를 입력해주세요.";
 		}
-		if(name == null || name.trim().length() == 0) {
+		if(Ut.empty(name)) {
 			return "name(을)를 입력해주세요.";
 		}
-		if(nickname == null || nickname.trim().length() == 0) {
+		if(Ut.empty(nickname)) {
 			return "nickname(을)를 입력해주세요.";
 		}
-		if(cellphoneNo == null || cellphoneNo.trim().length() == 0) {
+		if(Ut.empty(cellphoneNo)) {
 			return "cellphoneNo(을)를 입력해주세요.";
 		}
-		if(email == null || email.trim().length() == 0) {
+		if(Ut.empty(email)) {
 			return "email(을)를 입력해주세요.";
 		}
 	
@@ -44,6 +44,9 @@ public class UserMemberController {
 		
 		if(id == -1) {
 			return "해당 로그인 아이디는 이미 사용중입니다.";
+		}
+		if(id == -2) {
+			return "해당 이름과 이메일은 사용중입니다.";
 		}
 		
 		Member member = memberService.getMemberById(id);

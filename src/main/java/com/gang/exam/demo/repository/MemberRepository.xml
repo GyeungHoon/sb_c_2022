@@ -33,5 +33,7 @@ SELECT * FROM `member` AS M WHERE M.id = #{id}
 	SELECT * FROM `member` AS M WHERE M.loginId = #{loginId}
 </select>
 
-
+<select id="">
+SELECT * FROM `member` AS M WHERE M.name = #{name} AND M.email =#{email}
+</select>
 </mapper>
