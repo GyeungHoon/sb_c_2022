@@ -13,7 +13,7 @@ import com.gang.exam.demo.vo.Member;
 import com.gang.exam.demo.vo.ResultData;
 
 @Controller
-public class UserMemberController {
+public class UsrMemberController {
 
 	@Autowired
 	private MemberService memberService;

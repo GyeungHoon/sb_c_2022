@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "mybatis.mybatis.logging",
+    "type": "java.lang.String",
+    "description": "A description for 'mybatis.mybatis.logging'"
+  },
+  {
+    "name": "mybatis.level.jdbc.sqlonly",
+    "type": "java.lang.String",
+    "description": "A description for 'mybatis.level.jdbc.sqlonly'"
+  },
+  {
+    "name": "mybatis.logging",
+    "type": "java.lang.String",
+    "description": "A description for 'mybatis.logging'"
+  },
+  {
+    "name": "mybatis.level.org.springframework.web",
+    "type": "java.lang.String",
+    "description": "A description for 'mybatis.level.org.springframework.web'"
+  },
+  {
+    "name": "mybatis.level.com.zaxxer.hikari.HikariDataSource",
+    "type": "java.lang.String",
+    "description": "A description for 'mybatis.level.com.zaxxer.hikari.HikariDataSource'"
+  }
+]}
