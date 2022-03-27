@@ -11,7 +11,7 @@
 		updateDate=NOW(),
 		memberId = #{memberId},
 		title=#{title},
-		`body`=#{body}
+		`body` = #{body}
 	</insert>
 
 
@@ -40,17 +40,18 @@
 		where id = #{id}
 	</delete>
 
-	<update id="modifyArticle">
+	<update id="modifyArticle" parameterType="Article">
 		UPDATE article
 		<set>
 		<if test="title != null and title !='' ">
 			 title = #{title},
 		</if>
 		<if test="body != null and title !='' ">
-			`body`=#{body},
+			`body` = #{body},
 		</if>
+		updateDate = NOW()
 		</set>
-		updateDate=NOW()
-		where id=#{id}
+		
+		where id= #{id}
 	</update>
 </mapper>
