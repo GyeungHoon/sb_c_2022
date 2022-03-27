@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>main</title>
+<link rel="stylesheet" href="/resource/common.css" />
+<script type="text/javascript" src="/resource/common.js" defer="defer"></script>
 </head>
 <body>
   <h1>게시물 리스트 페이지</h1>
