@@ -15,7 +15,9 @@
 <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
 
 <!-- 폰트어썸 불러오기 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- 사이트 공통 CSS -->
 <link rel="stylesheet" href="/resource/common.css" />
@@ -24,14 +26,35 @@
 
 </head>
 <body>
- <h1>${pageTitle}페이지</h1>
-
   <header>
-    <a href="/">로고</a>
-    
-    <ul>
-      <li><a href="/">홈</a></li>
-      <li><a href="/usr/article/list">리스트</a></li>
-      <li><a href="/usr/member/login">로그인</a></li>
-    </ul>
+    <div class="h-20 flex container mx-auto">
+      <a href="/" class="flex items-center px-3">
+        <span>로고</span>
+      </a>
+      <div class="flex-grow"></div>
+      <ul class="flex ">
+        <li>
+          <a class="h-full flex px-3 items-center hover:underline" href="/">
+            <span>홈</span>
+          </a>
+        </li>
+        <li>
+          <a class="h-full flex px-3 items-center hover:underline" href="/usr/article/list">
+            <span>리스트</span>
+          </a>
+        </li>
+        <li>
+          <a class="h-full flex px-3 items-center hover:underline" href="/usr/member/login">
+            <span>로그인</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </header>
+
+  <section class="mt-5">
+    <div class="container mx-auto px-3">
+      <h1>${pageTitle}페이지</h1>
+    </div>
+  </section>
+  <main>

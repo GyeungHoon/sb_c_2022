@@ -5,9 +5,11 @@
 <%@ include file="../common/head.jspf" %>
 
 
- <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ipsa ducimus itaque obcaecati ullam error
-   eligendi reiciendis maiores maxime natus at nulla hic. Esse animi et nemo voluptatibus est voluptas.
- </div>
+<section class="mt-5">
+  <div class="container mx-auto px-3">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto natus esse nam. Eligendi porro nemo rem magni reprehenderit aspernatur officia unde hic dignissimos dolore obcaecati corrupti blanditiis tempora veritatis id.
+  </div>
+</section>
 
  
  <%@ include file="../common/foot.jspf" %>
