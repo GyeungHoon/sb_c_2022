@@ -16,10 +16,12 @@
 
 
 	<select id="getArticles" resultType="Article">
-		SELECT *
-		from article
-		ORDER BY
-		id DESC
+		SELECT A.*,
+		M.nickname AS extra__writerName
+		from article AS A
+		LEFT JOIN member AS M
+		ON A.memberId = M.id
+		ORDER BY id DESC
 	</select>
 
 	<select id="getArticle" resultType="Article">
