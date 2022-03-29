@@ -23,7 +23,7 @@ public class Ut {
 			msg = "";
 		}
 		
-		return Ut.f("<script> const msg = '%s'.trim(); if(msg.lenght>0){alert(msg);} history.back() </script>", msg);
+		return Ut.f("<script> const msg = '%s'.trim(); if(msg.length > 0){ alert(msg);} history.back() </script>", msg);
 	}
 
 	public static String jsReplace(String msg, String uri) {
@@ -34,6 +34,6 @@ public class Ut {
 		if(uri == null) {
 			uri = "";
 		}
-		return Ut.f("<script> const msg = '%s'.trim(); if(msg.lenght>0){alert(msg);} location.replace('%s') </script>",msg, uri);
+		return Ut.f("<script> const msg = '%s'.trim(); if(msg.length>0){alert(msg);} location.replace('%s') </script>",msg, uri);
 	}
 }
