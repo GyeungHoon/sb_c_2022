@@ -18,6 +18,17 @@
             <td>
             ${rq.logineMember.nickname }
             </td>
+            <th>게시판</th>
+            <td>
+            <select name="boardId" id="">
+
+            <option selected disabled">게시판을 선택해주세요</option>
+            <option value="1" selected>공지게시판</option>
+            <option value="2" selected>자유게시판</option>
+         
+              
+            </select>
+            </td>
           </tr>
           <tr>
             <th>제목</th>

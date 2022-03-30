@@ -16,7 +16,7 @@ import com.gang.exam.demo.vo.Article;
 public interface ArticleRepository {
 
 	
-	public void writeArticle(@Param("memberId") int memberId, @Param("title")String title, @Param("body")String body);
+	public void writeArticle(@Param("memberId") int memberId, @Param("boardId")int boardId, @Param("title")String title, @Param("body")String body);
 	
 	public Article getForPrintArticle(@Param("id") int id);
 	
