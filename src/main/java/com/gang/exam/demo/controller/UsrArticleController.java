@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.gang.exam.demo.service.ArticleService;
+import com.gang.exam.demo.service.BoardService;
 import com.gang.exam.demo.util.Ut;
 import com.gang.exam.demo.vo.Article;
+import com.gang.exam.demo.vo.Board;
 import com.gang.exam.demo.vo.ResultData;
 import com.gang.exam.demo.vo.Rq;
 
@@ -22,17 +24,21 @@ import com.gang.exam.demo.vo.Rq;
 public class UsrArticleController {
 	@Autowired
 	private ArticleService articleService;
+	@Autowired
+	private BoardService boardService;
 
 	// 액션 메서드 시작
 	
 
 	@RequestMapping("/usr/article/list")
-	public String showList(HttpServletRequest req, Model model) {
+	public String showList(HttpServletRequest req, Model model, int boardId) {
+		Board board = boardService.getBoardById(boardId);
 
 		Rq rq = (Rq) req.getAttribute("rq");
 
 		List<Article> articles = articleService.getForPrintArticles(rq.getLoginedMemberId());
 
+		model.addAttribute("board", board);
 		model.addAttribute("articles", articles);
 
 		return "usr/article/list";
