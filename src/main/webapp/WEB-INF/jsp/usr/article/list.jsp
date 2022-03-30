@@ -6,6 +6,10 @@
 
 <section class="mt-5">
   <div class="container mx-auto px-3">
+  
+  <div>
+    게시물 개수: ${articlesCount}건
+  </div>
     <div class="table-box-type-1">
       <table>
       <colgroup>
