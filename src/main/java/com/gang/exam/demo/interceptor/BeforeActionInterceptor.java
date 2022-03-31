@@ -13,8 +13,10 @@ import com.gang.exam.demo.vo.Rq;
 @Component
 public class BeforeActionInterceptor implements HandlerInterceptor {
 
+	@Autowired
+	private Rq rq;
 	public boolean preHandle(HttpServletRequest req, HttpServletResponse resp, Object handler) throws Exception {
-		// 이제는 Rq 객체가 자동으로 만들어지기 때문에 필요없음
+		rq.initOnBeforeActionInterceptor();
 		
 		return HandlerInterceptor.super.preHandle(req, resp, handler);
 	}

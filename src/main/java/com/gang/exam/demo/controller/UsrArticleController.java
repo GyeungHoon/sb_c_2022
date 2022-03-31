@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.gang.exam.demo.service.ArticleService;
@@ -31,7 +32,7 @@ public class UsrArticleController {
 	
 	// 액션 메서드 시작
 	@RequestMapping("/usr/article/list")
-	public String showList(Model model, int boardId) {
+	public String showList(Model model,@RequestParam(defaultValue = "1") int boardId, @RequestParam(defaultValue = "1")int page) {
 		Board board = boardService.getBoardById(boardId);
 		
 		if(board == null) {
@@ -39,7 +40,9 @@ public class UsrArticleController {
 		}
 
 		int  articlesCount = articleService.getArticlesCount(boardId);
-		List<Article> articles = articleService.getForPrintArticles(rq.getLoginedMemberId(),boardId);
+		
+		int itemsCountInAPage = 10;
+		List<Article> articles = articleService.getForPrintArticles(rq.getLoginedMemberId(),boardId,itemsCountInAPage, page);
 
 		model.addAttribute("board", board);
 		model.addAttribute("articlesCount", articlesCount);
@@ -153,7 +156,7 @@ public class UsrArticleController {
 			replaceUri = Ut.f( "../article/detail?id=%d", id);
 		}
 		
-		return rq.jsReplace(Ut.f("%d번 글이 생성되었습니다", id), "");
+		return rq.jsReplace(Ut.f("%d번 글이 생성되었습니다", id), replaceUri);
 	}
 	// 액션 메서드 끝
 }

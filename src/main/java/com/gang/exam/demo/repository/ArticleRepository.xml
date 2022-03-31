@@ -29,6 +29,9 @@
 		AND A.boardId = #{boardId}
 		</if>
 		ORDER BY id DESC
+		<if test="limitStart != -1">
+		LIMIT #{limitStart}, #{limitTake}
+		</if>
 	</select>
 
 	<select id="getForPrintArticle" resultType="Article">
