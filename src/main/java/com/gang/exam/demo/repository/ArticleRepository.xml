@@ -91,6 +91,17 @@
 
 	</select>
 	
+	
+	<select id="getArticleHitCount" resultType="int">
+	
+	SELECT id
+	FROM article
+	WHERE id = #{id}
+	
+	</select>
+	
+	
+	
 	<update id="increaseHitCount" parameterType="int">
 	
 		UPDATE article
