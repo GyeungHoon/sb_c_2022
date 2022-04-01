@@ -11,6 +11,14 @@
 
 <script type="text/javascript">
 function ArticleDetail__increaseHitCount(){
+	
+	const localStorageKey = 'article__'+params.id+'__viewDone'
+	
+	if(localStorage.setItem(localStorageKey)){
+		return;	
+	}
+	localStorage.getItem(localStorageKey,true);
+	
 	$.get('/article/doIncreaseHitCountRd',{
 			id: params.id
 			ajaxMode:'Y'
