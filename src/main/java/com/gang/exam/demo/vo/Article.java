@@ -20,10 +20,19 @@ public class Article{
 	private boolean extra__actorCanModify;
 	private boolean extra__actorCanDelete;
 	
-	public String getRegDateForPrint() {
+	public String forPrintType1RegDate() {
+		return regDate.substring(2, 16).replace(" ", "<br>");
+	}
+	
+	public String forPrintType1UpdateDate() {
+		return updateDate.substring(2, 16).replace(" ", "<br>");
+	}
+	
+	public String forPrintType2RegDate() {
 		return regDate.substring(2, 16);
 	}
-	public String getUpdateDateForPrint() {
+	
+	public String forPrintType2UpdateDate() {
 		return updateDate.substring(2, 16);
 	}
 	
