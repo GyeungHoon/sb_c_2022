@@ -79,7 +79,7 @@ public class Rq {
 		
 	}
 
-	public String HistoryBackJsOnView(String msg) {
+	public String historyBackJsOnView(String msg) {
 		req.setAttribute("msg", msg);
 		req.setAttribute("historyBack", true);
 		
@@ -100,5 +100,6 @@ public class Rq {
 	public void initOnBeforeActionInterceptor() {
 		
 	}
+
 	
 }
